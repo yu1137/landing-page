@@ -4,12 +4,13 @@
 
 /* Reset CSS */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-a { text-decoration: none; color: #000;}
+a { text-decoration: none; color: #222;}
 ul { list-style: none; }
 h1,h2,h3,h4,h5,h6 { font-weight: normal; }
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  color: #222;
 }
 /* Button */
 button {
@@ -75,6 +76,7 @@ button {
 .project {
   height: 300px;
   position: relative;
+  overflow: hidden;
 }
 .project-container {
   width: 100%;
@@ -86,11 +88,6 @@ button {
 }
 .project-container h3 {
   font-weight: 600;
-}
-.project-container p {
-  font-weight: 300;
-  font-size: 14px;
-  margin-top: 5px;
 }
 
 /* Services */
@@ -117,7 +114,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .services-items div {
   width: 25%
@@ -145,7 +142,7 @@ button {
 
 /* Portfolio */
 .portfolio {
-  margin-top: 50px ;
+  margin: 50px 0;
 }
 .portfolio-text {
   text-align: center;
@@ -189,8 +186,9 @@ button {
 }
 .portfolio-sub {
   position: absolute;
-  top: 80px;
-  left: 50px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%,-50%);
   color: #fff;
   z-index: 2;
 }
@@ -222,7 +220,7 @@ button {
 .footer {
   width: 100%;
   padding: 80px 0;
-  background-color: #348AC7;
+  background-color: #7474BF;
 }
 .footer-container {
   max-width: 1200px;
@@ -264,7 +262,7 @@ button {
 }
 
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 1200px) {
   .btn {
     padding: 10px 15px;
     font-size: 14px;
@@ -275,10 +273,9 @@ button {
     align-items: center;
     flex-direction: column;
     text-align: center;
-
   }
   .main-text {
-    width: 100%;
+    width: 50%;
     margin-top: 60px;
   }
   .main-text h1 {
@@ -288,22 +285,14 @@ button {
     margin: auto;
     margin-top: 20px;
     font-size: 14px;
-    width: 50%;
   }
 
   /* Project */
-  .portfolio-sub {
-    top: 50%;
-    left: 50%;
-    transform: translate(-70%,-50%);
+  .project-container {
+    width: 50%;
   }
   .project-container h3 {
-    width: 100%;
-    font-size: 26px;
-  }
-  .project-container p {
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 24px;
   }
 
   /* Services */
@@ -316,11 +305,10 @@ button {
   .services-items {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 20px;
     gap: 40px;
   }
   .services-items div {
-    width: 30%;
+    width: 40%;
   }
   .services-items i {
     margin-top: 10px;
@@ -333,6 +321,10 @@ button {
   }
 
   /* Portfolio */
+  .portfolio {
+    margin: 0;
+    margin-top: 50px;
+  }
   .portfolio-text span {
     font-size: 16px;
   }
@@ -350,7 +342,7 @@ button {
     font-size: 24px;
   }
   .portfolio-sub p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .white-box:hover {
     border: 30px solid #fff;
@@ -380,5 +372,61 @@ button {
   }
   .footer-icons i {
     margin: 0 10px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  /* Main */
+  .main-text {
+    width: 100%;
+  }
+  .main-text h1 {
+    font-size: 24px;
+  }
+  .main-text p {
+    width: 85%;
+    font-size: 12px;
+  }
+
+  /* Project */
+  .project-container {
+    width: 90%;
+  }
+  .project-container h3 {
+    font-size: 20px;
+  }
+
+  /* Services */
+  .services-text span {
+    font-size: 12px;
+  }
+  .services-text h2 {
+    font-size: 24px;
+  }
+  .services-items {
+    margin-top: 40px;
+  }
+  .services-items h5 {
+    font-size: 14px;
+  }
+  .services-items p {
+    font-size: 10px;
+  }
+
+  /* Portfolio */
+  .portfolio-text span {
+    font-size: 12px;
+  }
+  .portfolio-text h2 {
+    font-size: 24px;
+  }
+  .portfolio-item {
+    width: 100%;
+  }
+  .portfolio-sub h4 {
+    font-size: 18px;
+  }
+  .portfolio-sub p {
+    font-size: 12px;
   }
 }
